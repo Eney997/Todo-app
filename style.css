@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Josefin Sans', sans-serif;
+    box-sizing: border-box;
+}
+body {
+    background-color: black; 
+}
+.container {
+    display: grid;
+    place-items: center;
+}
+header {
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(135deg, #3710BD 0%, #A42395 100%);
+    display: flex;
+    justify-content: center;
+    place-items: center;
+    column-gap: 185px;
+}
+.hh1 {
+   margin-top: -70px;
+   color: #FFF;
+   font-family: Josefin Sans;
+   font-size: 20px;
+   font-style: normal;
+   font-weight: 700;
+   line-height: normal;
+   letter-spacing: 15px;
+}
+.Sun {
+    margin-top: -74px;
+    cursor: pointer;
+}
+input[type=text]{
+    width: 327px;
+    height: 48px;
+    border-radius: 5px;
+    background: #25273D;
+    box-shadow: 0px 35px 50px -15px rgba(0, 0, 0, 0.50);
+    border: none;
+    outline: none;
+    background-image: url(/assets/UncheckedCircle.svg);
+    background-repeat: no-repeat;
+    background-position: 3% 50% ;
+    position: absolute;
+    margin-left: -165px;
+    margin-top: -100px;
+}
+.inputText {
+    text-align:bottom 0px;padding-left:40px;
+    color: #767992;
+    font-family: Josefin Sans;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.167px;
+}
+.ListBackgroun {
+    margin-top: 40px;
+    width: 327px;
+    height: 100%;
+    border-radius: 5px;
+    background: #25273D;
+    box-shadow: 0px 35px 50px -15px rgba(0, 0, 0, 0.50);
+}
+.underline {
+    width: 327px;
+    height: 1px;
+    background: #393A4B;
+}
+ul li {
+    list-style: none;
+    font-size: 15px;
+    padding: 25px 8px 22px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    color: #C8CBE7;
+    font-family: Josefin Sans;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.167px;
+}
+ul li::before{
+    content: '';
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border-radius: 50px;
+    background-image: url(/assets/UncheckedCircle.svg);
+    background-size: cover;
+    background-position: center;
+    top: 20px;
+    left: 8px;
+}
+.underTxt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 327px;
+    height: 48px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background: #25273D;
+    box-shadow: 0px 35px 50px -15px rgba(0, 0, 0, 0.50);
+    column-gap: 138px;
+    margin-top: -15px;
+}
+.UTh1 {
+    color: #5B5E7E;
+    cursor: pointer;
+    font-family: Josefin Sans;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.167px;
+}
+.UTh1:hover {
+    color: #3A7CFD;
+}
+ul li.checked {
+    color: #393A4B;
+    text-decoration: line-through;
+}
+ul li.checked::before{
+    background-image: url(/assets/CheckedSign.svg);
+}
+.lastBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 60px;
+    margin-top: 16px;
+    width: 327px;
+    height: 48px;
+    border-radius: 5px;
+    background: #25273D;
+    box-shadow: 0px 35px 50px -15px rgba(0, 0, 0, 0.50);
+}
+.LB1 {
+    cursor: pointer;
+    color: #5B5E7E;
+    font-family: Josefin Sans;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.194px;
+}
+.LB1:hover{
+    color: #3A7CFD;
+}
+footer {
+    cursor: pointer;
+    margin-top: 50px;
+    color: #5B5E7E;
+    text-align: center;
+    font-family: Josefin Sans;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.194px;
+}
+footer:hover {
+    color: #3A7CFD;
+}
+

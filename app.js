@@ -1,6 +1,16 @@
 const inputBox = document.getElementById('inputBox')
 const list = document.getElementById('list')
 const underLine = document.querySelector('.underline')
+const sunIcon = document.querySelector('.Sun') 
+
+sunIcon.onclick = function(){
+    document.body.classList.toggle('light-mode')
+    if(document.body.classList.contains('light-mode')){
+        sunIcon.src = '/assets/Moon.svg'
+    }else {
+        sunIcon.src = '/assets/Sun.svg'
+    }
+}
 
 function gela(){
     if(inputBox.value === ''){

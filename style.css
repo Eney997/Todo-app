@@ -10,6 +10,7 @@
     --boxColors:#25273D;
     --letterColors:#C8CBE7;
     --underlineColor:#393A4B;
+    --footerColor:#5B5E7E;
 }
 body {
     background-color:var(--bacground-color); 
@@ -120,7 +121,7 @@ ul li::before{
     margin-top: -15px;
 }
 .UTh1 {
-    color: var(--letterColors);
+    color: var(--footerColor);
     cursor: pointer;
     font-family: Josefin Sans;
     font-size: 13px;
@@ -149,11 +150,10 @@ ul li.checked::before{
     height: 48px;
     border-radius: 5px;
     background: var(--boxColors);
-    box-shadow: 0px 35px 50px -15px rgba(0, 0, 0, 0.50);
 }
 .LB1 {
     cursor: pointer;
-    color: var(--letterColors);
+    color: var(--footerColor);
     font-family: Josefin Sans;
     font-size: 14px;
     font-style: normal;
@@ -184,5 +184,6 @@ footer:hover {
     --boxColors:#FFF;
     --letterColors:#494C6B;
     --underlineColor:#E3E4F1;
+    --footerColor:#9495A5;
     transition: 1.5s;
 }

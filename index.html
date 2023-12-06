@@ -7,20 +7,21 @@
     <link rel="stylesheet" href="/style.css">
     <link rel="stylesheet" href="/resp.css">
     <link rel="icon" href="/assets/todo.png">
+    <script src="https://kit.fontawesome.com/afb69e72c1.js" crossorigin="anonymous"></script>
     <title>Todo App</title>
 </head>
 <body>
     <div class="container"> 
-            <header>
-                <h1 class="hh1">TODO</h1>
-                    <img class="Sun" src="/assets/Sun.svg">
+        <header>
+            <h1 class="hh1">TODO</h1>
+                <img class="Sun" src="/assets/Sun.svg">
             </header>
-            <div>
-                <input type="text" id="inputBox" class="inputText" placeholder="Create a new todo…">
-            </div>
+        <div>
+    <input type="text" id="inputBox" class="inputText" placeholder="Create a new todo…">
+        </div>
             <div class="ListBackgroun">
                 <ul id="list">
-                    <li class="checked">Subscribe my Github></li>
+                    <li class="checked">Follow me on my Github</li>
                         <div class="underline"></div>
                             <li >Connect me on Linkedin</li>
                         <div class="underline"></div>
@@ -28,15 +29,19 @@
                 <div class="underline"></div> 
             </ul>
         </div>
-            <div class="underTxt">
-                    <h1 class="UTh1">Items left</h1>
-                <span class="UTh1">Clear Completed</span>
-            </div>
-                <div class="lastBox">
-                    <h1 class="LB1">All</h1>
-                        <h2 class="LB1">Active</h2>
-                    <h3 class="LB1">Completed</h3>
+    <div class="underTxt">
+        <h1 id="Itemsleft" class="UTh1">Items left</h1>
+            <span id="ClearComplited" class="UTh1">Clear Completed</span>
                 </div>
+                    <div class="lastBox">
+                        <h1 id="ShowAll" class="LB1">All</h1>
+                            <h2 id="onlyActive" class="LB1">Active</h2>
+                                <h3 id="onlyCompleted" class="LB1">Completed</h3>
+                            </div>
+                        <div class="socials">
+                    <a href="https://www.linkedin.com/in/tornike-dzidziguri-234a01292/"><i id="Linkedin" class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/Eney997"><i id="Github" class="fa-brands fa-github"></i></a>
+            </div>    
         <footer>Drag and drop to reorder list</footer>
     </div>   
 </body>

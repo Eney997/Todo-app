@@ -11,6 +11,7 @@
     --letterColors:#C8CBE7;
     --underlineColor:#393A4B;
     --footerColor:#5B5E7E;
+    --githubColor:#fff;
 }
 body {
     background-color:var(--bacground-color); 
@@ -51,9 +52,6 @@ input[type=text]{
     box-shadow: 0px 35px 50px -15px rgba(0, 0, 0, 0.50);
     border: none;
     outline: none;
-    background-image: url(/assets/UncheckedCircle.svg);
-    background-repeat: no-repeat;
-    background-position: 3% 50% ;
     position: absolute;
     margin-left: -165px;
     margin-top: -100px;
@@ -106,6 +104,18 @@ ul li::before{
     background-position: center;
     top: 20px;
     left: 8px;
+}
+ul li span {
+    position: absolute;
+    right: 0;
+    top: 11px;
+    width: 70px;
+    height: 150px;
+    font-size: 32px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
 }
 .underTxt {
     display: flex;
@@ -167,6 +177,7 @@ ul li.checked::before{
 footer {
     cursor: pointer;
     margin-top: 50px;
+    margin-bottom: 90px;
     color: var(--letterColors);
     text-align: center;
     font-family: Josefin Sans;
@@ -185,5 +196,30 @@ footer:hover {
     --letterColors:#494C6B;
     --underlineColor:#E3E4F1;
     --footerColor:#9495A5;
+    --githubColor:black;
     transition: 1.5s;
+}
+.socials {
+    margin-top: 50px;
+    column-gap: 30px;
+    display: grid;
+    place-items: center;
+    grid-template-areas: 'erti ori';
+}
+#Linkedin {
+    font-size: 25px;
+    grid-area: erti;
+    color: #3A7CFD;
+}
+#Github {
+    font-size: 25px;
+    grid-area: ori;
+    color:var(--githubColor);
+}
+#Linkedin:hover{
+    color: #0d55e6;;
+}
+#Github:hover {
+    background: linear-gradient(135deg, #3710BD 0%, #A42395 100%);
+    border-radius: 50%;
 }

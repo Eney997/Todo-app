@@ -78,3 +78,12 @@ onlyCompleted.addEventListener('click', function() {
       li.style.display = '';
     });
 });
+
+
+ClearComplited.addEventListener('click', function() {
+    const completedItems = list.querySelectorAll('li.checked');
+    completedItems.forEach(function(item){
+        item.remove(); 
+    });
+});
+

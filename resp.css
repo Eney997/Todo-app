@@ -1,5 +1,6 @@
 @media (width>768px){
     header {
+        margin-top: -50px;
         column-gap: 370px;
         height: 300px;
     }

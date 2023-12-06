@@ -2,11 +2,12 @@ const inputBox = document.getElementById('inputBox')
 const list = document.getElementById('list')
 const underLine = document.querySelector('.underline')
 const sunIcon = document.querySelector('.Sun') 
-const Itemsleft = document.getElementById('Itemsleft')
+const CountItems = document.getElementById('Itemsleft')
 const ClearComplited = document.getElementById('ClearComplited')
 const ShowAll = document.getElementById('ShowAll')
 const onlyActive = document.getElementById('onlyActive')
 const onlyCompleted = document.getElementById('onlyCompleted')
+
 
 sunIcon.onclick = function(){
     document.body.classList.toggle('light-mode')
@@ -16,6 +17,8 @@ sunIcon.onclick = function(){
         sunIcon.src = '/assets/Sun.svg'
     }
 }
+
+
 function gela(){
     if(inputBox.value === ''){
         console.log('Entered')
@@ -26,9 +29,14 @@ function gela(){
         let span = document.createElement('span')
         span.innerHTML = 'x'
         li.appendChild(span)
+        let underline = document.createElement('div');
+        underline.className = 'underline';
+        list.appendChild(underline);
     }
     inputBox.value = ''
 }
+
+
 list.addEventListener('click', function(e){
     if(e.target.tagName === 'LI'){
         e.target.classList.toggle('checked')
@@ -36,8 +44,37 @@ list.addEventListener('click', function(e){
         e.target.parentElement.remove()
     }
 })
+
+
 document.querySelector('.inputText').addEventListener('keydown', function(e) {
-    if (e.key === 'Enter') {
-        gela()
+if (e.key === 'Enter') {
+    gela()
     }
+});
+
+
+ShowAll.addEventListener('click', function() {
+    list.querySelectorAll('li').forEach(li => {
+      li.style.display = '';
+    });
+});
+  
+
+onlyActive.addEventListener('click', function() {
+    list.querySelectorAll('li.checked').forEach(li => {
+      li.style.display = 'none';
+    });
+    list.querySelectorAll('li:not(.checked)').forEach(li => {
+      li.style.display = '';
+  });
+});
+  
+  
+onlyCompleted.addEventListener('click', function() {
+    list.querySelectorAll('li:not(.checked)').forEach(li => {
+      li.style.display = 'none';
+    });
+    list.querySelectorAll('li.checked').forEach(li => {
+      li.style.display = '';
+    });
 });

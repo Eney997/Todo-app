@@ -45,11 +45,6 @@ list.addEventListener('click', function(e){
     }
 })
 
-ClearComplited.addEventListener('click', function(e){
-    
-})
-
-
 
 document.querySelector('.inputText').addEventListener('keydown', function(e) {
 if (e.key === 'Enter') {
@@ -69,14 +64,14 @@ onlyActive.addEventListener('click', function() {
     list.querySelectorAll('li.checked').forEach(li => {
       li.style.display = 'none';
     });
-    list.querySelectorAll('li.checked::before').forEach(li => {
+    list.querySelectorAll('li:not(.checked)').forEach(li => {
       li.style.display = '';
   });
 });
   
   
 onlyCompleted.addEventListener('click', function() {
-    list.querySelectorAll('li.checked::before').forEach(li => {
+    list.querySelectorAll('li:not(.checked)').forEach(li => {
       li.style.display = 'none';
     });
     list.querySelectorAll('li.checked').forEach(li => {

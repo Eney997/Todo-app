@@ -43,6 +43,7 @@ list.addEventListener('click', function(e){
     }else if (e.target.tagName === 'SPAN'){
         e.target.parentElement.remove()
     }
+    updateItemCount()
 })
 
 
@@ -57,6 +58,7 @@ ShowAll.addEventListener('click', function() {
     list.querySelectorAll('li').forEach(li => {
       li.style.display = '';
     });
+    updateItemCount()
 });
   
 
@@ -67,6 +69,7 @@ onlyActive.addEventListener('click', function() {
     list.querySelectorAll('li:not(.checked)').forEach(li => {
       li.style.display = '';
   });
+  updateItemCount()
 });
   
   
@@ -77,6 +80,7 @@ onlyCompleted.addEventListener('click', function() {
     list.querySelectorAll('li.checked').forEach(li => {
       li.style.display = '';
     });
+    updateItemCount()
 });
 
 
@@ -85,5 +89,13 @@ ClearComplited.addEventListener('click', function() {
     completedItems.forEach(function(item){
         item.remove(); 
     });
+    updateItemCount()
 });
 
+
+function updateItemCount() {
+    const items = list.querySelectorAll('li:not(.checked)');
+    const itemCount = items.length;
+    CountItems.textContent = itemCount + ' Items left';
+}
+updateItemCount()

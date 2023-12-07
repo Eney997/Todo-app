@@ -50,6 +50,7 @@ list.addEventListener('click', function(e){
 document.querySelector('.inputText').addEventListener('keydown', function(e) {
 if (e.key === 'Enter') {
     gela()
+    updateCount()
     }
 });
 
